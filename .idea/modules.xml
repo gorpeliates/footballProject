@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/footballProject.iml" filepath="$PROJECT_DIR$/.idea/footballProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend/frontend.iml" filepath="$PROJECT_DIR$/frontend/frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backEnd/src/main/main.iml" filepath="$PROJECT_DIR$/backEnd/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backEnd/src/test/test.iml" filepath="$PROJECT_DIR$/backEnd/src/test/test.iml" />
     </modules>
   </component>
 </project>
