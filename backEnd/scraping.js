@@ -11,7 +11,7 @@ const pool = new Pool({
 
 const puppeteer = require('puppeteer');
 
-(async () => {
+async function getData()  {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://fbref.com/en/comps/9/misc/Premier-League-Stats');
@@ -32,4 +32,6 @@ const puppeteer = require('puppeteer');
     console.log(rowData);
 
     await browser.close();
-})();
+}
+
+getData()
