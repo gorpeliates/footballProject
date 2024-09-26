@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/player")
+@RequestMapping("api/players")
 public class PlayerController {
 
     private final PlayerService playerService;
@@ -28,6 +28,10 @@ public class PlayerController {
     @GetMapping("/player/{id}")
     public ResponseEntity<Player> getPlayerById(@PathVariable("id") Long id){
         return new ResponseEntity<>(playerService.getPlayerById(id), HttpStatus.OK);
+    }
+    @PostMapping
+    public ResponseEntity<Player> createPlayer(@RequestBody Player player){
+        return new ResponseEntity<>(playerService.addPlayer(player), HttpStatus.OK);
     }
 
 }

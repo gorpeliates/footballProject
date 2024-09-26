@@ -19,8 +19,24 @@ public class PlayerService {
     public List<Player> getPlayers(){
         return playerRepository.findAll();
     }
+
+    /**
+     * get player from the database by ID
+     * @param id
+     * @return
+     */
     public Player getPlayerById(Long id){
         return playerRepository.findById(id).isPresent() ? playerRepository.findById(id).get() : null;
+    }
+
+    /**
+     * Add Player to DB
+     * @param player player to sav
+     *
+     * @return player ,Null if failed
+     */
+    public Player addPlayer(Player player){
+        return playerRepository.save(player);
     }
 
 }

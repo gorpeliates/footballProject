@@ -20,16 +20,19 @@ public class Player {
     public Player() {
     }
 
-    public Player(Long id, String name, String nationality, Integer age, String position, Integer starts, Double minutes, Integer goals, Integer assists) {
-        this.id = id;
-        this.name = name;
-        this.nationality = nationality;
-        this.age = age;
-        this.position = position;
-        this.starts = starts;
-        this.minutes = minutes;
-        this.goals = goals;
-        this.assists = assists;
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", age=" + age +
+                ", position='" + position + '\'' +
+                ", starts=" + starts +
+                ", minutes=" + minutes +
+                ", goals=" + goals +
+                ", assists=" + assists +
+                '}';
     }
 
     public Long getId() {
