@@ -28,6 +28,7 @@ public class DBIntegrator implements CommandLineRunner {
             playerService.addPlayer(player);
         });
     }
+
     public DBIntegrator(PlayerService playerService) {
         this.playerService = playerService;
     }

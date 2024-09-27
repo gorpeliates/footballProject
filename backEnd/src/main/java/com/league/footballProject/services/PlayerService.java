@@ -39,4 +39,17 @@ public class PlayerService {
         return playerRepository.save(player);
     }
 
+    /**
+     * deletes a player from the database
+     * @param player player to be removed
+     * @return true if player removed, false otherwise
+     */
+    public boolean deletePlayer(Player player){
+        if(playerRepository.existsById(player.getId())) {
+            playerRepository.deleteById(player.getId());
+            return true;
+        }
+        return false;
+    }
+
 }
